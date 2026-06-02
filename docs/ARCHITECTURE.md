@@ -1,6 +1,9 @@
 # MediCare — Multi-Role Platform Architecture
 
-> **Status:** Design proposal (Phase 2). Not yet implemented.
+> **Status:** Design proposal — now reclassified as the **Phase 4** blueprint. See `STRATEGY.md`.
+> The §10 open decisions have been resolved in `STRATEGY.md`; the provider/multi-role layer
+> below is correct but deliberately deferred until we have a large patient base. Build the
+> Phase 2 caregiver/growth loop first.
 > **Scope:** Extends the shipped patient-only app into a patient + doctor + caregiver + admin platform.
 > **Audience:** Reviewer (product owner) — read this and approve the data model *before* code changes begin.
 
