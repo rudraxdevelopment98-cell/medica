@@ -231,42 +231,52 @@ export interface Database {
         Row: UserProfile;
         Insert: Omit<UserProfile, 'created_at' | 'updated_at'>;
         Update: Partial<Omit<UserProfile, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       medications: {
         Row: Medication;
         Insert: Omit<Medication, 'id' | 'created_at' | 'updated_at'>;
         Update: Partial<Omit<Medication, 'id' | 'user_id' | 'created_at'>>;
+        Relationships: [];
       };
       medication_schedules: {
         Row: MedicationSchedule;
         Insert: Omit<MedicationSchedule, 'id' | 'created_at'>;
         Update: Partial<Omit<MedicationSchedule, 'id' | 'medication_id' | 'created_at'>>;
+        Relationships: [];
       };
       medication_logs: {
         Row: MedicationLog;
         Insert: Omit<MedicationLog, 'id' | 'created_at'>;
         Update: Partial<Omit<MedicationLog, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       vitals: {
         Row: Vital;
         Insert: Omit<Vital, 'id' | 'created_at'>;
         Update: Partial<Omit<Vital, 'id' | 'user_id' | 'created_at'>>;
+        Relationships: [];
       };
       appointments: {
         Row: Appointment;
         Insert: Omit<Appointment, 'id' | 'created_at' | 'updated_at'>;
         Update: Partial<Omit<Appointment, 'id' | 'user_id' | 'created_at'>>;
+        Relationships: [];
       };
       conditions: {
         Row: Condition;
         Insert: Omit<Condition, 'id' | 'created_at'>;
         Update: Partial<Omit<Condition, 'id' | 'user_id' | 'created_at'>>;
+        Relationships: [];
       };
       emergency_contacts: {
         Row: EmergencyContact;
         Insert: Omit<EmergencyContact, 'id' | 'created_at'>;
         Update: Partial<Omit<EmergencyContact, 'id' | 'user_id' | 'created_at'>>;
+        Relationships: [];
       };
     };
+    Views: Record<string, { Row: Record<string, unknown>; Relationships: [] }>;
+    Functions: Record<string, { Args: Record<string, unknown>; Returns: unknown }>;
   };
 }
